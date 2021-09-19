@@ -1,9 +1,9 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import OutlinedButtons3 from '../Components/downloadbutton1';
+import OutlinedButtons3 from '../Components/DownloadButton1';
 import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded';
 import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded';
-import BasicTable from '../Components/table1';
+import BasicTable from '../Components/Table1';
 
 export default function Etourist3() {
   return (

@@ -5,9 +5,9 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { alpha, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
+import SimpleMenu from './Homepage/Menu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -77,7 +77,7 @@ export default function SearchAppBar() {
             color="inherit"
             aria-label="open drawer"
           >
-            <MenuIcon />
+            <SimpleMenu/>
           </IconButton>
           <HomeIcon/>
           <div className={classes.search}>
