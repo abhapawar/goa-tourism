@@ -1,8 +1,13 @@
 import './App.css';
-import ButtonAppBar from './Components/AppBar.js'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './Pages/Home.js'
-import Gallery from './Pages/Gallery.js'
+import PrimarySearchAppBar from './Components/AppBarSearch';
+import Homepage1 from './Pages/Homepage1';
+import Statistics2 from './Pages/Statistics2';
+import Etourist3 from './Pages/Etourist3';
+import Arrivals4 from './Pages/Arrivals4';
+import ContactUs from './Components/Homepage/ContactUs';
+import SimpleAccordion from './Components/Homepage/Languages';
+import AppFooter from './Components/Homepage/Footer';
 
 
 function App() {
@@ -10,19 +15,22 @@ function App() {
     <div className="App">
       {/* Header (Navigation Bar) */}
       <header className="App-header">
-      <ButtonAppBar/>
+        <ContactUs/>
+        <SimpleAccordion/>
+     <PrimarySearchAppBar/>
       </header>
       
       {/* Router - Pages */}
           <Switch>
-            <Route path={process.env.PUBLIC_URL + '/'} exact > <Home/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/home'} > <Home/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/gallery'}  > <Gallery/> </Route>
-          </Switch>
+            <Route path={process.env.PUBLIC_URL + '/'} exact > <Homepage1/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/homepage1'}  > <Homepage1/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/Statistics2'}  > <Statistics2/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/etourist3'}  > <Etourist3/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/arrivals4'}  > <Arrivals4/> </Route>
 
-      <footer className="App-footer">
-        This is a footer
-      </footer>
+          </Switch>
+          <AppFooter/>
+
     </div>
   );
   }
