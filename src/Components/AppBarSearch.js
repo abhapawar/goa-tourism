@@ -6,6 +6,7 @@ import { alpha, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
 import SimpleMenu from './Homepage/Menu';
+import { Link, Router } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -77,10 +78,13 @@ export default function SearchAppBar() {
           >
             <SimpleMenu/>
           </IconButton>
+          <Link to={process.env.PUBLIC_URL + '/Homepage1'}>
           <HomeIcon/>
+          </Link>
+
           <div className={classes.search}>
             <div className={classes.searchIcon}>
-              <SearchIcon />
+              <SearchIcon/>
             </div>
 
           </div>

@@ -4,6 +4,7 @@ import OutlinedButtons3 from '../Components/DownloadButton1';
 import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded';
 import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded';
 import BasicTable from '../Components/Table1';
+import { Link, Router } from "react-router-dom";
 
 export default function Etourist3() {
   return (
@@ -18,9 +19,13 @@ export default function Etourist3() {
         </p>
         <BasicTable />
         <OutlinedButtons3 />
+        <Link to={process.env.PUBLIC_URL + '/Statistics2'}>
         <ArrowBackIosRoundedIcon />
-        <ArrowForwardIosRoundedIcon />
-      </Container>
-    </React.Fragment>
+        </Link>
+        <Link to={process.env.PUBLIC_URL + '/Arrivals4'}>
+      <ArrowForwardIosRoundedIcon/>
+      </Link>
+    </Container>
+    </React.Fragment >
   );
 }

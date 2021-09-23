@@ -42,7 +42,7 @@ const rows = [
   createData('21', 'United Kingdom', 38292),
   createData('22', 'Vietnam', 6),
   createData('23', 'Zimbabwe', 7),
-  
+
 ];
 
 export default function BasicTable() {
