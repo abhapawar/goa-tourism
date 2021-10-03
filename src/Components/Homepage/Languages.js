@@ -8,10 +8,13 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import English from './English';
 import Hindi from './Hindi';
 import Konkani from './Konkani';
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    width: '40%',
+    position: 'relative',
+    left: '60%'
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -24,9 +27,10 @@ export default function SimpleAccordion() {
 
   return (
     <div className={classes.root}>
+      <Box component="span" m={1}>
       <Accordion>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon/>}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -42,6 +46,7 @@ export default function SimpleAccordion() {
           <Konkani/>
         </AccordionDetails>
       </Accordion>
+      </Box>
     </div>
   );
 }

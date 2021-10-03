@@ -15,7 +15,7 @@ export default function Disclaimer() {
 
   return (
     <div className={classes.root}>
-      <Button color="primary">Disclaimer</Button>
+      <Button color="inherit">Disclaimer</Button>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded';
-import {Link, Router} from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,10 +18,10 @@ export default function OutlinedButtons2() {
   return (
     <div className={classes.root}>
       <Link to={process.env.PUBLIC_URL + '/Arrivals4'}>
-      <Button variant="outlined" color="primary" href="">
-      Arrivals by Charter Flights during Season
-        <ArrowForwardIosRoundedIcon/>
-      </Button>
+        <Button variant="outlined" color="primary" href="">
+          Arrivals by Charter Flights during Season
+          <ArrowForwardIosRoundedIcon />
+        </Button>
       </Link>
     </div>
   );

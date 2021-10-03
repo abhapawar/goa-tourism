@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 300,
   },
 });
 
@@ -34,7 +34,7 @@ const rows = [
   createData('2012-2013', 996, 215304),
   createData('2013-2014', 1128, 261452),
   createData('2014-2015', 895, 161316),
-  createData('2015-2016', 798, 158779) ,
+  createData('2015-2016', 798, 158779),
   createData('2016-2017', 988, 232679),
   createData('2017-2018', 981, 247365),
   createData('2018-2019', 813, 218776),
@@ -44,27 +44,29 @@ export default function BasicTable2() {
   const classes = useStyles();
 
   return (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Year</TableCell>
-            <TableCell align="right">No. of Flights</TableCell>
-            <TableCell align="right">Passengers&nbsp;</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.No_of_Flights}</TableCell>
-              <TableCell align="right">{row.Passengers}</TableCell>
+    <Paper elevation={0}>
+      <TableContainer component={Paper}>
+        <Table className={classes.table} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Year</TableCell>
+              <TableCell align="center">No. of Flights</TableCell>
+              <TableCell align="center">Passengers&nbsp;</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow key={row.name}>
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="center">{row.No_of_Flights}</TableCell>
+                <TableCell align="center">{row.Passengers}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Paper>
   );
 }

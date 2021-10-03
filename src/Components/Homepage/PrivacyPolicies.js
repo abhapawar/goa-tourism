@@ -15,7 +15,7 @@ export default function PrivacyPolicies() {
 
   return (
     <div className={classes.root}>
-      <Button color="primary">PrivacyPolicies</Button>
+      <Button color="inherit">PrivacyPolicies</Button>
     </div>
   );
 }

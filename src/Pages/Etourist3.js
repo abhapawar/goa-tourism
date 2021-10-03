@@ -1,31 +1,44 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import OutlinedButtons3 from '../Components/DownloadButton1';
-import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded';
-import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded';
 import BasicTable from '../Components/Table1';
 import { Link, Router } from "react-router-dom";
+import Paper from '@material-ui/core/Paper';
+import { Grid } from '@material-ui/core';
+import FrontArrow from '../Assets/FrontArrow.svg';
+import BackArrow from '../Assets/BackArrow.svg';
+import { Box } from '@material-ui/core';
 
 export default function Etourist3() {
   return (
     <React.Fragment>
       <Container fixed>
-        <p>
+        <Paper elevation={0}>
           Statistics
-        </p>
+        </Paper>
 
-        <p>
+        <Paper elevation={0}>
           Most E Tourist Visa for the Year 2019
-        </p>
+        </Paper>
         <BasicTable />
-        <OutlinedButtons3 />
-        <Link to={process.env.PUBLIC_URL + '/Statistics2'}>
-        <ArrowBackIosRoundedIcon />
-        </Link>
-        <Link to={process.env.PUBLIC_URL + '/Arrivals4'}>
-      <ArrowForwardIosRoundedIcon/>
-      </Link>
-    </Container>
-    </React.Fragment >
+        <Box>
+          <Grid container spacing={0} justifyContent="center" alignItems="center" >
+            <Grid item xl={4} xs={4}>
+              <Link to={process.env.PUBLIC_URL + '/Statistics2'}>
+                <img src={FrontArrow} alt='FrontArrow' />
+              </Link>
+            </Grid>
+            <Grid item xl={4} xs={4}>
+              <OutlinedButtons3 />
+            </Grid>
+            <Grid item xl={4} xs={4}>
+              <Link to={process.env.PUBLIC_URL + '/Arrivals4'}>
+                <img src={BackArrow} alt='BackArrow' />
+              </Link>
+            </Grid>
+          </Grid>
+        </Box>
+      </Container>
+    </React.Fragment>
   );
 }

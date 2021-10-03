@@ -15,7 +15,7 @@ export default function TermsandConditions() {
 
   return (
     <div className={classes.root}>
-      <Button color="primary">Terms and Conditions</Button>
+      <Button color="inherit">Terms and Conditions</Button>
     </div>
   );
 }

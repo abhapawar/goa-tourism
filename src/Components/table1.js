@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 300,
   },
 });
 
@@ -49,27 +49,29 @@ export default function BasicTable() {
   const classes = useStyles();
 
   return (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Sr. No.</TableCell>
-            <TableCell align="right">Nationality (Alphabetical)</TableCell>
-            <TableCell align="right">Visa&nbsp;</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.Nationality}</TableCell>
-              <TableCell align="right">{row.Visa}</TableCell>
+    <Paper elevation={0}>
+      <TableContainer component={Paper}>
+        <Table className={classes.table} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Sr. No.</TableCell>
+              <TableCell align="center">Nationality (Alphabetical)</TableCell>
+              <TableCell align="center">Visa&nbsp;</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow key={row.name}>
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="center">{row.Nationality}</TableCell>
+                <TableCell align="center">{row.Visa}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Paper>
   );
 }
