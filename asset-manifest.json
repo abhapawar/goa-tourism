@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/goa-tourism/static/css/main.915667ca.chunk.css",
-    "main.js": "/goa-tourism/static/js/main.ff90c6f5.chunk.js",
-    "main.js.map": "/goa-tourism/static/js/main.ff90c6f5.chunk.js.map",
+    "main.css": "/goa-tourism/static/css/main.5c386878.chunk.css",
+    "main.js": "/goa-tourism/static/js/main.e161ceae.chunk.js",
+    "main.js.map": "/goa-tourism/static/js/main.e161ceae.chunk.js.map",
     "runtime-main.js": "/goa-tourism/static/js/runtime-main.7f831423.js",
     "runtime-main.js.map": "/goa-tourism/static/js/runtime-main.7f831423.js.map",
-    "static/js/2.d49a3431.chunk.js": "/goa-tourism/static/js/2.d49a3431.chunk.js",
-    "static/js/2.d49a3431.chunk.js.map": "/goa-tourism/static/js/2.d49a3431.chunk.js.map",
+    "static/js/2.3cd2aab0.chunk.js": "/goa-tourism/static/js/2.3cd2aab0.chunk.js",
+    "static/js/2.3cd2aab0.chunk.js.map": "/goa-tourism/static/js/2.3cd2aab0.chunk.js.map",
     "index.html": "/goa-tourism/index.html",
-    "static/css/main.915667ca.chunk.css.map": "/goa-tourism/static/css/main.915667ca.chunk.css.map",
-    "static/js/2.d49a3431.chunk.js.LICENSE.txt": "/goa-tourism/static/js/2.d49a3431.chunk.js.LICENSE.txt",
+    "static/css/main.5c386878.chunk.css.map": "/goa-tourism/static/css/main.5c386878.chunk.css.map",
+    "static/js/2.3cd2aab0.chunk.js.LICENSE.txt": "/goa-tourism/static/js/2.3cd2aab0.chunk.js.LICENSE.txt",
     "static/media/BackArrow.b0d8f1e8.svg": "/goa-tourism/static/media/BackArrow.b0d8f1e8.svg",
     "static/media/Banner1.0e233b84.jpeg": "/goa-tourism/static/media/Banner1.0e233b84.jpeg",
     "static/media/Banner2.9dbfec9f.jpeg": "/goa-tourism/static/media/Banner2.9dbfec9f.jpeg",
@@ -17,17 +17,25 @@
     "static/media/Banner4.ced5949e.jpeg": "/goa-tourism/static/media/Banner4.ced5949e.jpeg",
     "static/media/Banner5.97e71194.jpeg": "/goa-tourism/static/media/Banner5.97e71194.jpeg",
     "static/media/Department.83bbed92.jpg": "/goa-tourism/static/media/Department.83bbed92.jpg",
+    "static/media/Facebook.2bf805c4.svg": "/goa-tourism/static/media/Facebook.2bf805c4.svg",
     "static/media/FrontArrow.c11f0847.svg": "/goa-tourism/static/media/FrontArrow.c11f0847.svg",
     "static/media/Goa2.1632cb14.jpeg": "/goa-tourism/static/media/Goa2.1632cb14.jpeg",
     "static/media/Goa3.47866553.jpeg": "/goa-tourism/static/media/Goa3.47866553.jpeg",
     "static/media/GoaGovernment.35bdd1a9.png": "/goa-tourism/static/media/GoaGovernment.35bdd1a9.png",
     "static/media/GoaLogo.54ecf58c.png": "/goa-tourism/static/media/GoaLogo.54ecf58c.png",
-    "static/media/Video.897ef5a4.jpg": "/goa-tourism/static/media/Video.897ef5a4.jpg"
+    "static/media/Hamburger.98a7cb9e.svg": "/goa-tourism/static/media/Hamburger.98a7cb9e.svg",
+    "static/media/Home.f84e153f.svg": "/goa-tourism/static/media/Home.f84e153f.svg",
+    "static/media/Insta.c0d7e82f.svg": "/goa-tourism/static/media/Insta.c0d7e82f.svg",
+    "static/media/RedArrow.3171820a.svg": "/goa-tourism/static/media/RedArrow.3171820a.svg",
+    "static/media/Search.331842e5.svg": "/goa-tourism/static/media/Search.331842e5.svg",
+    "static/media/Twitter.1b4892ed.svg": "/goa-tourism/static/media/Twitter.1b4892ed.svg",
+    "static/media/Video.897ef5a4.jpg": "/goa-tourism/static/media/Video.897ef5a4.jpg",
+    "static/media/YouTube.c200b912.svg": "/goa-tourism/static/media/YouTube.c200b912.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.7f831423.js",
-    "static/js/2.d49a3431.chunk.js",
-    "static/css/main.915667ca.chunk.css",
-    "static/js/main.ff90c6f5.chunk.js"
+    "static/js/2.3cd2aab0.chunk.js",
+    "static/css/main.5c386878.chunk.css",
+    "static/js/main.e161ceae.chunk.js"
   ]
 }
