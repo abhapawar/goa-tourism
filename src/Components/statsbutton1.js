@@ -1,15 +1,19 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded';
 import { Link, Router } from "react-router-dom";
+import arrow from '../Assets/RedArrow.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
+      colour: 'black'
     },
   },
+  arrow: {
+    colour: 'red'
+  }
 }));
 
 export default function OutlinedButtons() {
@@ -18,9 +22,9 @@ export default function OutlinedButtons() {
   return (
     <div className={classes.root}>
       <Link to={process.env.PUBLIC_URL + '/Etourist3'}>
-        <Button variant="outlined" color="primary" href="">
+        <Button variant="outlined" href="">
           Most E Tourist Visas for the Year 2019
-          <ArrowForwardIosRoundedIcon />
+          <img src={arrow} className="arrow" alt="arrow" />
         </Button>
       </Link>
     </div>

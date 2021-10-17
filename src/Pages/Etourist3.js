@@ -8,16 +8,31 @@ import { Grid } from '@material-ui/core';
 import FrontArrow from '../Assets/FrontArrow.svg';
 import BackArrow from '../Assets/BackArrow.svg';
 import { Box } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles((theme) => ({
+  heading: {
+    margin: 30,
+    fontWeight: 'bold',
+    fontSize: 18
+  },
+  subheading: {
+    margin: 25,
+    fontWeight: 'bold',
+    fontSize: 13
+  },
+}))
 
 export default function Etourist3() {
+  const classes = useStyles();
   return (
     <React.Fragment>
       <Container fixed>
-        <Paper elevation={0}>
+        <Paper elevation={0} className={classes.heading}>
           Statistics
         </Paper>
 
-        <Paper elevation={0}>
+        <Paper elevation={0} className={classes.subheading}>
           Most E Tourist Visa for the Year 2019
         </Paper>
         <BasicTable />

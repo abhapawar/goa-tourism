@@ -7,16 +7,31 @@ import Paper from '@material-ui/core/Paper';
 import { Grid } from '@material-ui/core';
 import FrontArrow from '../Assets/FrontArrow.svg';
 import { Box } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles((theme) => ({
+  heading: {
+    margin: 30,
+    fontWeight: 'bold',
+    fontSize: 18
+  },
+  subheading: {
+    margin: 25,
+    fontWeight: 'bold',
+    fontSize: 13
+  },
+}))
 
 export default function Arrivals7() {
+  const classes = useStyles();
   return (
     <React.Fragment>
       <Container fixed>
-        <Paper elevation={0}>
+        <Paper elevation={0} className={classes.heading}>
           Statistics
         </Paper>
 
-        <Paper elevation={0}>
+        <Paper elevation={0} className={classes.subheading}>
           Arrivals by Charter Flights during Season
         </Paper>
         <BasicTable2 />

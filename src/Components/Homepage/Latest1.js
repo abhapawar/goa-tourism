@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded';
+import RedArrow from '../../Assets/RedArrow.svg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,9 +17,9 @@ export default function Latest1() {
   return (
     <div className={classes.root}>
       <Button variant="outlined">
-      Latest Updates
-      <ArrowForwardIosRoundedIcon/>
-       </Button>
+        Latest Updates
+        <img src={RedArrow} className="RedArrow" alt="RedArrow" />
+      </Button>
     </div>
   );
 }

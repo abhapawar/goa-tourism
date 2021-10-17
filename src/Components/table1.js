@@ -12,6 +12,9 @@ const useStyles = makeStyles({
   table: {
     minWidth: 300,
   },
+  text: {
+    fontSize: 11,
+  }
 });
 
 function createData(name, Nationality, Visa) {
@@ -49,24 +52,24 @@ export default function BasicTable() {
   const classes = useStyles();
 
   return (
-    <Paper elevation={0}>
+    <Paper elevation={0} className={classes.text}>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Sr. No.</TableCell>
-              <TableCell align="center">Nationality (Alphabetical)</TableCell>
-              <TableCell align="center">Visa&nbsp;</TableCell>
+              <TableCell className={classes.text}> Sr. No.</TableCell>
+              <TableCell className={classes.text} align="center">Nationality (Alphabetical)</TableCell>
+              <TableCell className={classes.text} align="center">Visa&nbsp;</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.name}>
-                <TableCell component="th" scope="row">
+                <TableCell className={classes.text} component="th" scope="row">
                   {row.name}
                 </TableCell>
-                <TableCell align="center">{row.Nationality}</TableCell>
-                <TableCell align="center">{row.Visa}</TableCell>
+                <TableCell className={classes.text} align="center">{row.Nationality}</TableCell>
+                <TableCell className={classes.text} align="center">{row.Visa}</TableCell>
               </TableRow>
             ))}
           </TableBody>

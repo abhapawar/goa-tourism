@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
+      colour: 'black'
     },
   },
 }));
@@ -15,7 +16,7 @@ export default function PrivacyPolicies() {
 
   return (
     <div className={classes.root}>
-      <Button color="inherit">PrivacyPolicies</Button>
+      <Button>Privacy Policies</Button>
     </div>
   );
 }

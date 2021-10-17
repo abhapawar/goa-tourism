@@ -3,11 +3,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import { alpha, makeStyles } from '@material-ui/core/styles';
-import SearchIcon from '@material-ui/icons/Search';
-import HomeIcon from '@material-ui/icons/Home';
-import SimpleMenu from './Homepage/Menu';
 import { Link, Router } from "react-router-dom";
 import GoaLogo from './../Assets/GoaLogo.png';
+import Home from './../Assets/Home.svg';
+import Search from './../Assets/Search.svg';
+import { Grid } from '@material-ui/core';
+import SimpleMenu from './Homepage/Menu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,6 +48,13 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
+  AppBar: {
+    padding: '1%',
+    background: '#ffffff',
+    borderStyle: 'solid none solid none',
+    borderColor: '#B1B1B1',
+    boxShadow: '0 0 0 0'
+  },
 
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -68,28 +76,32 @@ export default function SearchAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.AppBar}>
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <SimpleMenu />
-          </IconButton>
-          <Link to={process.env.PUBLIC_URL + '/Homepage1'}>
-            <HomeIcon />
-          </Link>
-
-          <img src={GoaLogo} className="Goa-Logo" alt="Goa-Logo" width="20%" height="20%" />
-
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+          <Grid item xl={2} xs={2}>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="open drawer">
+              <SimpleMenu />
+            </IconButton>
+          </Grid>
+          <Grid item xl={2} xs={2}>
+            <Link to={process.env.PUBLIC_URL + '/Homepage1'}>
+              <img src={Home} className="Home" alt="Home" />
+            </Link>
+          </Grid>
+          <Grid item xl={6} xs={6}>
+            <img src={GoaLogo} className="Goa-Logo" alt="Goa-Logo" width="90" height="100%" />
+          </Grid>
+          <Grid item xl={2} xs={2}>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <img src={Search} className="Search" alt="Search" />
+              </div>
             </div>
-
-          </div>
+          </Grid>
         </Toolbar>
       </AppBar>
     </div>

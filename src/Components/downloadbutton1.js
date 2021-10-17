@@ -6,8 +6,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
+      colour: 'black',
     },
   },
+  download: {
+    borderStyle: 'solid',
+    BorderColor: 'yellow'
+  }
 }));
 
 export default function OutlinedButtons3() {
@@ -15,7 +20,7 @@ export default function OutlinedButtons3() {
 
   return (
     <div className={classes.root}>
-      <Button variant="outlined" color="primary">
+      <Button variant="outlined">
         Download
       </Button>
     </div>
