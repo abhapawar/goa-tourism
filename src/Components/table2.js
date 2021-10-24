@@ -52,7 +52,7 @@ export default function BasicTable2() {
         <Table className={classes.table} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className={classes.text}>Year</TableCell>
+              <TableCell className={classes.text} align="center">Year</TableCell>
               <TableCell className={classes.text} align="center">No. of Flights</TableCell>
               <TableCell className={classes.text} align="center">Passengers&nbsp;</TableCell>
             </TableRow>
@@ -60,7 +60,7 @@ export default function BasicTable2() {
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.name}>
-                <TableCell className={classes.text} component="th" scope="row">
+                <TableCell className={classes.text} align="center" component="th" scope="row">
                   {row.name}
                 </TableCell>
                 <TableCell className={classes.text} align="center">{row.No_of_Flights}</TableCell>

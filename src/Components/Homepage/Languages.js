@@ -6,8 +6,22 @@ import { makeStyles } from '@material-ui/styles';
 import English from './English';
 import Hindi from './Hindi';
 import Konkani from './Konkani';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    alignContent: 'left',
+    marginRight: 20,
+  },
+  lang: {
+    color: '#562085',
+    textTransform: 'capitalize',
+  },
+}));
 
 export default function SimpleMenu01() {
+  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -18,9 +32,10 @@ export default function SimpleMenu01() {
   };
 
   return (
-    <div>
-      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+    <div className={classes.root}>
+      <Button className={classes.lang} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
         Languages
+        <ExpandMoreIcon />
       </Button>
       <Menu
         id="simple-menu"

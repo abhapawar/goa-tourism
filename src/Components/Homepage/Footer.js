@@ -14,6 +14,7 @@ import YouTube from '../../Assets/YouTube.svg';
 import Twitter from '../../Assets/Twitter.svg';
 import Facebook from '../../Assets/Facebook.svg';
 import Insta from '../../Assets/Insta.svg';
+import Images from './Images';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -24,7 +25,15 @@ const useStyles = makeStyles((theme) => ({
   },
   para: {
     backgroundColor: '#999999',
-  }
+  },
+  Icon: {
+    margin: 10,
+  },
+  Copyright: {
+    margin: 10,
+    backgroundColor: '#999999',
+    color: 'white'
+  },
 }));
 
 export default function AppFooter() {
@@ -60,20 +69,23 @@ export default function AppFooter() {
           <Box>
             <Grid container spacing={1}>
               <Grid item xl={3} xs={3}>
-                <img src={YouTube} className="Youtube" alt="Menu" />
+                <img src={YouTube} alt="Menu" className={classes.Icon} />
               </Grid>
               <Grid item xl={3} xs={3}>
-                <img src={Twitter} className="Twitter" alt="Menu" />
+                <img src={Twitter} alt="Menu" className={classes.Icon} />
               </Grid>
               <Grid item xl={3} xs={3}>
-                <img src={Facebook} className="Facebook" alt="Menu" />
+                <img src={Facebook} alt="Menu" className={classes.Icon} />
               </Grid>
               <Grid item xl={3} xs={3}>
-                <img src={Insta} className="Insta" alt="Menu" />
+                <img src={Insta} alt="Menu" className={classes.Icon} />
+              </Grid>
+              <Grid item xl={12} xs={12}>
+                <Images />
               </Grid>
             </Grid>
           </Box>
-          <Paper elevation={0} className={classes.para}>
+          <Paper elevation={0} className={classes.Copyright}>
             Copyright ©️ 2021. All Rights Reserved. This is the official website of Goa Tourism Department, Govt of Goa.
           </Paper>
 

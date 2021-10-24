@@ -4,11 +4,12 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    display: 'flex',
+    justifyContent: 'right',
+    marginRight: 15,
     '& > *': {
-      margin: theme.spacing(1),
-      position: 'relative',
-      right: '-30%',
-      color: 'black'
+      color: '#562085',
+      textTransform: 'capitalize',
     },
   },
 }));

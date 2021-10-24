@@ -6,7 +6,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
-      colour: 'black'
+      colour: 'black',
+      textTransform: 'capitalize'
     },
   },
 }));
@@ -16,7 +17,8 @@ export default function TermsandConditions() {
 
   return (
     <div className={classes.root}>
-      <Button>Terms and Conditions</Button>
+      <Button>Terms and Conditions
+      </Button>
     </div>
   );
 }

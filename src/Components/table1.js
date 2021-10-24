@@ -45,7 +45,6 @@ const rows = [
   createData('21', 'United Kingdom', 38292),
   createData('22', 'Vietnam', 6),
   createData('23', 'Zimbabwe', 7),
-
 ];
 
 export default function BasicTable() {
@@ -57,7 +56,7 @@ export default function BasicTable() {
         <Table className={classes.table} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className={classes.text}> Sr. No.</TableCell>
+              <TableCell className={classes.text} align="center"> Sr. No.</TableCell>
               <TableCell className={classes.text} align="center">Nationality (Alphabetical)</TableCell>
               <TableCell className={classes.text} align="center">Visa&nbsp;</TableCell>
             </TableRow>
@@ -65,7 +64,7 @@ export default function BasicTable() {
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.name}>
-                <TableCell className={classes.text} component="th" scope="row">
+                <TableCell className={classes.text} align="center" component="th" scope="row">
                   {row.name}
                 </TableCell>
                 <TableCell className={classes.text} align="center">{row.Nationality}</TableCell>

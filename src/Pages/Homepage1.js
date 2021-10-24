@@ -12,11 +12,17 @@ import Video from '../Assets/Video.jpg';
 import { Grid } from '@material-ui/core';
 import { Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  stepper: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+
   heading: {
     fontWeight: 'bold',
     fontSize: 20,
@@ -49,18 +55,20 @@ export default function Goahomepage() {
   return (
     <React.Fragment>
       <Container fixed>
+        <Hidden smUp>
 
-        <Grid item xl={12} xs={12}>
-          <img src={GoaGovernment} className="Government of Goa" alt="Government of Goa" width="100" height="100%" />
-        </Grid>
+          <Grid item xl={12} xs={12}>
+            <img src={GoaGovernment} className="Government of Goa" alt="Government of Goa" width="100" height="100%" />
+          </Grid>
 
-        <Paper elevation={0} className={classes.heading}>
-          Department of Tourism Goa
-        </Paper>
+          <Paper elevation={0} className={classes.heading}>
+            Department of Tourism Goa
+          </Paper>
 
-        <Paper elevation={0}>
-          Government of Goa
-        </Paper>
+          <Paper elevation={0}>
+            Government of Goa
+          </Paper>
+        </Hidden>
 
         <SwipeableTextMobileStepper />
         <Paper elevation={0} className={classes.subheading}>
@@ -86,8 +94,9 @@ export default function Goahomepage() {
         <Paper elevation={0} className={classes.sub}>
           Travel Essentials
         </Paper>
-
-        <TextMobileStepper />
+        <Paper elevation={0} className={classes.stepper}>
+          <TextMobileStepper />
+        </Paper>
 
         <Grid item xl={12} xs={12}>
           <Latest1 />
@@ -101,8 +110,10 @@ export default function Goahomepage() {
 
         <Paper elevation={0} className={classes.video}>
           A Glimpse into the Beauty of Goa
-          <img src={Video} className="Beauty of Goa" alt="Beauty of Goa" width="70%" height="70%" />
         </Paper>
+        <Grid item xl={12} xs={12}>
+          <img src={Video} className="Beauty of Goa" alt="Beauty of Goa" width="70%" height="70%" />
+        </Grid>
       </Container>
     </React.Fragment >
   );
